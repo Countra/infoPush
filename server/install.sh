@@ -25,7 +25,7 @@ choice=0
 
 alias cp="cp"
 
-read -rp "是否安装python38: " python_install
+read -rp "是否安装python38(Y/N): " python_install
     [[ -z ${python_install} ]] && python_install="Y"
     case $python_install in
     [yY][eE][sS] | [yY])
@@ -40,7 +40,7 @@ read -rp "是否安装python38: " python_install
         ;;
     esac
 
-read -rp "是否替换ssh登录前提示信息" info_head
+read -rp "是否替换ssh登录前提示信息(Y/N):" info_head
     [[ -z ${info_head} ]] && info_head="Y"
     case $info_head in
     [yY][eE][sS] | [yY])
@@ -53,7 +53,7 @@ read -rp "是否替换ssh登录前提示信息" info_head
         ;;
     esac
 
-read -rp "是否设置ssh登录显示信息 " info_in
+read -rp "是否设置ssh登录显示信息(Y/N): " info_in
     [[ -z ${info_in} ]] && info_in="Y"
     case $info_in in
     [yY][eE][sS] | [yY])
@@ -65,7 +65,7 @@ read -rp "是否设置ssh登录显示信息 " info_in
     esac
 
 if [[ "${choice}" == 0 ]];then
-        read -rp "是否覆盖之前的登录显示信息 " info_ini
+        read -rp "是否覆盖之前的登录显示信息(Y/N): " info_ini
             [[ -z ${info_ini} ]] && info_ini="Y"
             case $info_ini in
             [yY][eE][sS] | [yY])

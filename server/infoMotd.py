@@ -169,7 +169,7 @@ if __name__ == "__main__":
                                key=lambda kv: (kv[1], kv[0]),
                                reverse=True))[0:1]:
             M_p = psutil.Process(Mem_max[0])
-            cpus ="\n|\n|  < The process with the highest CPU usage >""\n|PID\tCPU use\t\t\tName\n|" \
+            cpus ="\n|\n|  < The process with the highest CPU usage >""\n|PID\tCPU use\t\tName\n|" \
                 + str(Mem_max[0]) + "\t  " + str(Mem_max[1]) + "\t" \
                 + " ".join(M_p.cmdline())
     with open('/var/countra/data/sysinfos', 'a+') as f:
